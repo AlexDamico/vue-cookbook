@@ -13,5 +13,10 @@ import { Component, Vue } from 'vue-property-decorator';
   components: {
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+	mounted() {
+		console.log('// v Store v')
+		console.log(this.$store)
+	}
+}
 </script>
