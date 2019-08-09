@@ -4,7 +4,6 @@ import { db } from './db'
 
 import { vuexfireMutations, firestoreAction } from 'vuexfire'
 
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
