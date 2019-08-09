@@ -18,6 +18,3 @@ export const db = firebase
       console.log('// v Recipe collection v')
       console.log(recipes)
     })
-
-// if using Firebase JS SDK < 5.8.0
-db.settings({ timestampsInSnapshots: true })
