@@ -6,7 +6,7 @@
       <!-- Print list of recipes from collection -->
       <ul>
       	<li :key="recipe.key" v-for="recipe in recipes">
-      		{{ recipe.name }}
+      		<router-link to="/recipe">{{ recipe.name }}</router-link>
       	</li>
       </ul>
     </div>
