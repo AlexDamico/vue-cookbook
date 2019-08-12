@@ -10,8 +10,9 @@
         </article>
         <article class="col-sm-6">
           <h2>Name</h2>
-          <div><strong>Prep Time:</strong> 00m</div>
-          <div><strong>Cooking Time:</strong> 00m</div>
+          <div><strong><font-awesome-icon icon="hourglass-half" /> Prep Time:</strong> 00m</div>
+          <div><strong><font-awesome-icon icon="clock" /> Cooking Time:</strong> 00m</div>
+          <div><strong><font-awesome-icon icon="user" /> Serves:</strong> 0-0</div>
         </article>
       </section>
 
@@ -30,7 +31,7 @@
 
       <section class="row">
         <article class="col-sm-6">
-          <h4>Ingredients</h4>
+          <h4><font-awesome-icon icon="scroll" /> Ingredients</h4>
 
           <ul>
             <li>Item</li>
@@ -40,7 +41,7 @@
         </article>
 
         <article class="col-sm-6">
-          <h4>Instructions</h4>
+          <h4><font-awesome-icon icon="list-ol" /> Instructions</h4>
 
           <ol>
             <li>Step</li>
@@ -55,6 +56,16 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+
+// FontAwesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faHourglassHalf, faUser, faClock, faListOl, faScroll } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+// FA Icons
+library.add(faHourglassHalf, faUser, faClock, faListOl, faScroll)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 @Component({
   components: {
