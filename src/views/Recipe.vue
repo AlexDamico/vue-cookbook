@@ -2,7 +2,6 @@
   <main class="recipe">
     <div class="container">
       <router-link to="/">< Back</router-link>
-      <h1>Recipe</h1>
 
       <section class="row">
         <article class="col-sm-6">
@@ -78,6 +77,17 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss" scoped>
+
+h1, h2, h3, h4, h5, h6 {
+  width: 60%;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #2A8FBD;
+}
+
+// Section dividers
+hr {
+  margin: 3vw 0;
+}
 
 // Preview image
 .preview {
