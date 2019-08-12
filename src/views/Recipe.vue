@@ -6,7 +6,7 @@
 
       <section class="row">
         <article class="col-sm-6">
-          <img src="" alt="Preview">
+          <img src="/img/beef-stew.jpg" class="preview" alt="Preview">
         </article>
         <article class="col-sm-6">
           <h2>Name</h2>
@@ -76,3 +76,13 @@ export default class Home extends Vue {
 
 }
 </script>
+
+<style lang="scss" scoped>
+
+// Preview image
+.preview {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 1px 2px 5px gray;
+}
+</style>
