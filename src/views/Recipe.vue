@@ -8,7 +8,7 @@
           <img src="/img/beef-stew.jpg" class="preview" alt="Preview">
         </article>
         <article class="col-sm-6">
-          <h2>Name</h2>
+          <h2>{{this.$route.query.recipe}}</h2>
           <div><strong><font-awesome-icon icon="hourglass-half" /> Prep Time:</strong> 00m</div>
           <div><strong><font-awesome-icon icon="clock" /> Cooking Time:</strong> 00m</div>
           <div><strong><font-awesome-icon icon="user" /> Serves:</strong> 0-0</div>
