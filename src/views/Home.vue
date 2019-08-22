@@ -6,7 +6,10 @@
       <!-- Print list of recipes from collection -->
       <ul>
       	<li :key="recipe.key" v-for="recipe in recipes">
-      		<router-link to="/recipe">{{ recipe.name }}</router-link>
+      		<router-link :to="{
+            path: '/recipe',
+            query: { recipe: recipe.key }
+          }">{{ recipe.name }}</router-link>
       	</li>
       </ul>
     </div>
@@ -40,7 +43,7 @@ export default class Home extends Vue {
       .get()
       .then((querySnapshot) => {
         const recipeCollection = querySnapshot.docs.map((doc) => doc.data());
-        this.recipes = recipeCollection;
+        this.$store.commit('fetch', recipeCollection);
       });
   }
 }

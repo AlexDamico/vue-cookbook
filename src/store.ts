@@ -6,13 +6,16 @@ import { vuexfireMutations, firestoreAction } from 'vuexfire';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     recipes: [],
   },
   mutations: {
     // other mutations
     ...vuexfireMutations,
+    fetch(state: any, data: any) {
+      state.recipes = data;
+    },
   },
   actions: {
   bindRecipes: firestoreAction(({ bindFirestoreRef }) => {
@@ -24,3 +27,5 @@ export default new Vuex.Store({
     }),
   },
 });
+
+export default store;
