@@ -12,7 +12,7 @@ const store = new Vuex.Store({
   },
   mutations: {
     // other mutations
-    // ...vuexfireMutations,
+    ...vuexfireMutations,
     fetch(state: any, data: any) {
       state.recipes = data;
     },
