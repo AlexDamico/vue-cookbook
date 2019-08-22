@@ -57,14 +57,14 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 // FontAwesome
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHourglassHalf, faUser, faClock, faListOl, faScroll } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHourglassHalf, faUser, faClock, faListOl, faScroll } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // FA Icons
-library.add(faHourglassHalf, faUser, faClock, faListOl, faScroll)
+library.add(faHourglassHalf, faUser, faClock, faListOl, faScroll);
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 @Component({
   components: {

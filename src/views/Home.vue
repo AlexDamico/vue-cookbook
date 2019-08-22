@@ -27,20 +27,20 @@ import { db } from '../db';
 export default class Home extends Vue {
 
   // Instantiate data objects
-  data() {
+  private data() {
     return {
       recipes: [],
     };
   }
 
   // Mount collection data from Firestore
-  mounted() {
+  private mounted() {
     db
       .collection('recipes')
       .get()
-      .then(querySnapshot => {
-        const recipes = querySnapshot.docs.map(doc => doc.data())
-        this.recipes = recipes;
+      .then((querySnapshot) => {
+        const recipeCollection = querySnapshot.docs.map((doc) => doc.data());
+        this.recipes = recipeCollection;
       });
   }
 }

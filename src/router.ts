@@ -14,9 +14,9 @@ export default new Router({
       name: 'home',
       component: Home,
     }, {
-    	path: '/recipe',
-    	name: 'recipe',
-    	component: Recipe
-    }
+      path: '/recipe',
+      name: 'recipe',
+      component: Recipe,
+    },
   ],
 });
