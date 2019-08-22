@@ -8,16 +8,14 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    // recipes: [],
-    count: 0,
+    recipes: [],
   },
   mutations: {
     // other mutations
     // ...vuexfireMutations,
-    fetch(state, data) {
-      // state.recipes = data;
-      state.count++
-    }
+    fetch(state: any, data: any) {
+      state.recipes = data;
+    },
   },
   actions: {
   bindRecipes: firestoreAction(({ bindFirestoreRef }) => {

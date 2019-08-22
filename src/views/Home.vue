@@ -43,8 +43,7 @@ export default class Home extends Vue {
       .get()
       .then((querySnapshot) => {
         const recipeCollection = querySnapshot.docs.map((doc) => doc.data());
-        this.$store.commit('feed', recipeCollection);
-        this.recipes = recipeCollection;
+        this.$store.commit('fetch', recipeCollection);
       });
   }
 }
