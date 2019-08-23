@@ -30,7 +30,7 @@ import { db } from '../db';
 export default class Home extends Vue {
 
   // Instantiate data objects
-  private data() {
+  public data() {
     return {
       recipes: [],
     };
@@ -42,8 +42,8 @@ export default class Home extends Vue {
       .collection('recipes')
       .get()
       .then((querySnapshot) => {
-        const recipeCollection = querySnapshot.docs.map((doc) => doc.data());
-        this.$store.commit('fetch', recipeCollection);
+        this.recipes = querySnapshot.docs.map((doc) => doc.data());
+        this.$store.commit('fetch', this.recipes);
       });
   }
 }
