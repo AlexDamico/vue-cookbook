@@ -10,6 +10,11 @@ const store = new Vuex.Store({
   state: {
     recipes: [],
   },
+  getters: {
+    getRecipeById: (state) => (id: Number) => {
+      return state.recipes.find(recipe => recipe.id === id) 
+    }
+  },
   mutations: {
     // other mutations
     ...vuexfireMutations,

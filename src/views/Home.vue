@@ -5,11 +5,8 @@
 
       <!-- Print list of recipes from collection -->
       <ul>
-      	<li :key="recipe.key" v-for="recipe in recipes">
-      		<router-link :to="{
-            path: '/recipe',
-            query: { recipe: recipe.key }
-          }">{{ recipe.name }}</router-link>
+      	<li v-bind:key="{index}" v-for="(recipe, index) in recipes">
+      		<router-link :to="'/recipe/' + recipe.name">{{ recipe.name }}</router-link>
       	</li>
       </ul>
     </div>
@@ -28,6 +25,10 @@ import { db } from '../db';
 })
 
 export default class Home extends Vue {
+
+  public tester(id) {
+    console.log(id);
+  }
 
   // Instantiate data objects
   public data() {
